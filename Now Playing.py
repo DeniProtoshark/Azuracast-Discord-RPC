@@ -6,7 +6,7 @@ from pypresence import Presence
 CLIENT_ID = ""  #Discord App ID
 API_URL = "" #Azuracast nowplaying api
 LISTEN_URL = "" #website
-ASSET_KEY = "" 
+ASSET_KEY = "" #Big logo name (from Discord Developers)
 
 
 rpc = Presence(CLIENT_ID)
@@ -68,6 +68,7 @@ while True:
         print("⚠️ Ошибка:", e) #console log
 
     time.sleep(15)
+
 
 
 
