@@ -1,3 +1,3 @@
 # Azuracast-Discord-RPC
-
-pip install pypresence requests
+For the bot to work, you need
+- pypresence 
