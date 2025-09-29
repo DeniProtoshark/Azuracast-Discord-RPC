@@ -3,9 +3,9 @@ import requests
 from pypresence import Presence
 
 
-CLIENT_ID = ""  #Discord App ID
-API_URL = "" #Azuracast nowplaying api
-LISTEN_URL = "" #website
+CLIENT_ID = ""  # Discord App ID
+API_URL = "" # Azuracast nowplaying api
+LISTEN_URL = "" # Website (to make it work, you need a Custom RPC plan in the client)
 ASSET_KEY = "" #Big logo name (from Discord Developers)
 
 
@@ -68,6 +68,7 @@ while True:
         print("⚠️ Ошибка:", e) #console log
 
     time.sleep(15)
+
 
 
 
