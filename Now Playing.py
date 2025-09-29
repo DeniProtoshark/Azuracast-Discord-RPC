@@ -11,7 +11,7 @@ ASSET_KEY = ""
 
 rpc = Presence(CLIENT_ID)
 rpc.connect()
-print("✅ Подключено к Discord RPC")
+print("✅ Подключено к Discord RPC") #console log
 
 def fetch_nowplaying():
     r = requests.get(API_URL, timeout=5)
@@ -60,13 +60,14 @@ while True:
         if payload != last_payload:
             rpc.update(**payload)
             last_payload = payload
-            print(f"🎵 Обновлено: {np['title']} — {np['artist']} (таймер: {bool(start and end)})")
+            print(f"🎵 Обновлено: {np['title']} — {np['artist']} (таймер: {bool(start and end)})") #console log
         else:
-            print("⏸️ Без изменений")
+            print("⏸️ Без изменений") #console log
 
     except Exception as e:
-        print("⚠️ Ошибка:", e)
+        print("⚠️ Ошибка:", e) #console log
 
     time.sleep(15)
+
 
 
