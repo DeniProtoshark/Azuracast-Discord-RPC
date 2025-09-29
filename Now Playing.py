@@ -2,13 +2,13 @@ import time
 import requests
 from pypresence import Presence
 
-# === Настройки ===
-CLIENT_ID = "1421901017150259260"  # твой Discord App ID
+
+CLIENT_ID = ""  #Discord App ID
 API_URL = "https://azura.hpsbassline.myftp.biz/api/station/haapsaly_bassline/nowplaying"
 LISTEN_URL = "https://hpsbassline.myftp.biz/"
-ASSET_KEY = "full_logo"  # имя картинки из Rich Presence Assets
+ASSET_KEY = "full_logo" 
 
-# === Подключение к Discord ===
+
 rpc = Presence(CLIENT_ID)
 rpc.connect()
 print("✅ Подключено к Discord RPC")
@@ -47,7 +47,7 @@ while True:
         start, end = compute_timestamps(np["duration"], np["elapsed"])
 
         payload = {
-    "details": np.get("title") or "Offline",  # всегда есть текст
+    "details": np.get("title") or "Offline",  
     "state": np.get("artist") or "Offline",
     "large_image": ASSET_KEY,
     "large_text": "HPS Bassline Radio",
@@ -68,3 +68,4 @@ while True:
         print("⚠️ Ошибка:", e)
 
     time.sleep(15)
+
