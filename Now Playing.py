@@ -4,9 +4,9 @@ from pypresence import Presence
 
 
 CLIENT_ID = ""  #Discord App ID
-API_URL = "https://azura.hpsbassline.myftp.biz/api/station/haapsaly_bassline/nowplaying"
-LISTEN_URL = "https://hpsbassline.myftp.biz/"
-ASSET_KEY = "full_logo" 
+API_URL = "" #Azuracast nowplaying api
+LISTEN_URL = "" #website
+ASSET_KEY = "" 
 
 
 rpc = Presence(CLIENT_ID)
@@ -68,4 +68,5 @@ while True:
         print("⚠️ Ошибка:", e)
 
     time.sleep(15)
+
 
